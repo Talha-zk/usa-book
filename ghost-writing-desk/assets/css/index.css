@@ -90,12 +90,16 @@
 
 .right-img{
     position: relative;
-    top:    100px;
-    left: 210px;
+    top:    50px;
+    left: 130px;
 }
 
 .text1{
     margin-top: 40px;
+    border-right: solid 2px black;
+    object-fit: contain;
+    text-align: center;
+ 
 }
 
 .swiper {
@@ -119,4 +123,156 @@
 }
 
 
+body {
+  margin: 0;
+  background: #fff;
+}
+
+.logo-slider {
+  overflow: hidden;
+  border: 2px solid rgb(255, 255, 255); /* Just like your screenshot border /
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(200%); / enough space for looping */
+  animation: scroll 10s linear infinite;
+}
+
+.slider-track img {
+  height: 60px;
+  margin: 0 30px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: transform 0.3s;
+}
+
+.slider-track img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+.portfolio{
+    text-align: center;
+    justify-content: center;
+    
+ 
+}
+
+
+.pt-text{
+    position: relative;
+bottom: 34px;
+margin-bottom:0px ;
+}
+.pt-text2{
+    position: relative;
+bottom: 42px;
+}
+
+.success-text{
+    color: #b9509f;
+    
+}
+
+
+
+
+@media only screen and (max-width: 1366px) {
+    .portfolioSec .stokeText {
+        top: -10rem;
+    }
+}
+
+.portfolioSec .stokeText {
+    position: absolute;
+    top: -4.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+}
+.stokeText {
+    font-size: 5rem;
+    font-weight: 900;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, .2);
+    color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    margin: 0;
+}
+.image-parent{
+ 
+  align-items: center;
+
+
+}
+.image-child{
+  justify-content: center;
+  align-items: center;
+  display: relative;
+padding-left: 20px;
+}
+
+.project{
+  margin-top: 100px;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.numbers{
+  color: #b9509f;
+  
+}
+
+.main-bg2{
+    background-image: url(../img/bg4.webp);
+}
+
+
+/* cant fix content */
+.box1 {
+    background: linear-gradient(#b9509f);
+    background-size: 0% 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: #2d353f;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 1.15rem 2.5rem;
+    border-radius: 10px;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #b9509f;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 500px; /* 🔑 Set equal height for all boxes */
+    transition: background-size 0.4s ease;
+}
+
+/* Hover effect */
+.box1:hover {
+    background-size: 100% 100%;
+    color: white;
+}
+
+@media (max-width: 768px) {
+  .box1 {
+    min-height: auto;
+  }
+}
 
