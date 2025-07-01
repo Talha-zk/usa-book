@@ -1,17 +1,28 @@
 .mail {
-  color: white;
+  color: rgb(255, 255, 255);
   position: relative;
   top: 14px;
   text-decoration: none;
-  transition: 0.2s;
+  transition:all 0.4s ease;
 }
 
 .mail:hover {
   color: #b9509f;
+
+ 
+  
 }
 .mail-icon {
   color: #b9509f;
 }
+
+.dropdown-menu{
+  background-color: #2d353f;
+}
+.dropdown-item{
+  color: white;
+}
+
 
 .head-body {
   background-color: #2d353f;
@@ -274,7 +285,7 @@ left: 200px;
 }
 
 .main-bg2 {
-  background-image: url(../img/bg4.webp); /* optional dark background */
+  background-image: url(../img/bg4.webp); 
   color: #ffffff;
 }
 
@@ -544,4 +555,154 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+
+.logo-grid-parent {
+  height: 600px;
+}
+
+/* Common circle style */
+.circle-wrapper {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.circle-wrapper img {
+  width: 120px;
+  height: auto;
+}
+
+.circle-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/* Position each logo individually */
+.trustpilot {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bbb {
+  top: 25%;
+  left: 5%;
+}
+
+.yelp {
+  top: 20%;
+  right: 5%;
+}
+
+.clutch {
+  bottom: 10%;
+  left: 10%;
+}
+
+.google {
+  bottom: 15%;
+  left: 42%;
+}
+
+.crunchbase {
+  bottom: 10%;
+  right: 10%;
+}
+
+ .signup-box {
+  background-color: #2b2d35;
+  border-radius: 12px;
+  color: 2b2d35;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.signup-box .badge {
+  background-color: #c42aa0;
+  color: white;
+  font-weight: 600;
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.signup-box .highlight {
+  color: #e957c5;
+}
+
+.signup-box .form-control,
+.signup-box .form-select {
+  border-radius: 8px;
+  border: 2px solid  white;
+  padding: 12px;
+
+  
+
+}
+
+.signup-box .form-control:focus,
+.signup-box .form-select:focus {
+  box-shadow: none;
+  border: 2px solid #c42aa0;
+  color: #626569;
+}
+
+.btn-submit {
+  background: linear-gradient(90deg, #c42aa0, #e957c5);
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+
+.back-bg0{
+  background-image: url(../img/bg3.webp);
+}
+.button4 {
+  background: linear-gradient(#2d353f, #2d353f);
+  background-size: 0% 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: #b9509f;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  border-radius: 10px;
+  color: white;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin: 20px;
+}
+
+/* Hover effect */
+.button4:hover {
+  background-size: 100% 100%;
+  color: white; /* keep or change if needed */
+}
+
+.slider-card {
+  width: auto;
+  height: auto;
+}
+.card{
+  margin: 20px;
 }
