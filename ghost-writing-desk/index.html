@@ -17,6 +17,7 @@
 
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/index.css" />
 </head>
@@ -24,85 +25,83 @@
 <body>
 
   <header>
-    <div>
-      <!-- Top Navbar -->
-      <nav class="navbar navbar-expand-lg head-body">
-        <div class="container d-flex justify-content-between align-items-center">
-          <img src="assets/img/logo (1).webp" class="rounded float-start" alt="..." width="20%" />
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-lg py-2 head-body">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="./">
+        <img src="assets/img/logo (1).webp" class="img-fluid" alt="Logo" style="max-width: 160px;" />
+      </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar"
+        aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-
-            <div>
-              <p>
-                <a href="#" class="mail link-underline-light">
-                  <i class="mail-icon bi bi-envelope"></i>
-                  sales@ghostwritingdesk.com
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Main Navbar -->
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <div class="row w-100">
-              <ul class="navbar-nav d-flex flex-wrap justify-content-center">
-                <li class="nav-item col-auto px-2">
-                  <a class="nav-link" href="./">Home</a>
-                </li>
-                <li class="nav-item col-auto px-2">
-                  <a class="nav-link" href="about">About Us</a>
-                </li>
-                <li class="nav-item dropdown col-auto px-2">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Ghostwriting
-                  </a>
-                  <ul class="dropdown-menu enlarge">
-                    <!-- dropdown items here -->
-                  </ul>
-                </li>
-                <li class="nav-item col-auto px-2">
-                  <a class="nav-link" href="book-editing">Book Editing</a>
-                </li>
-                <li class="nav-item col-auto px-2">
-                  <a class="nav-link" href="book-publishing">Book Publishing</a>
-                </li>
-                <li class="nav-item col-auto px-2">
-                  <a class="nav-link" href="book-marketing">Book Marketing</a>
-                </li>
-                <li class="nav-item dropdown col-auto px-2">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Other Services
-                  </a>
-                  <ul class="dropdown-menu">
-                    <!-- dropdown items here -->
-                  </ul>
-                </li>
-                <li class="nav-item col-auto px-2">
-                  <a class="nav-link" href="blogs">Blogs</a>
-                </li>
-                <li class="nav-item col-auto px-2">
-                  <a class="nav-link" href="contact-us">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <div class="collapse navbar-collapse justify-content-end" id="topNavbar">
+        <p class="mb-0">
+          <a href="mailto:sales@ghostwritingdesk.com" class="mail text-white text-decoration-none d-flex align-items-center">
+            <i class="bi bi-envelope me-2 text-white"></i> sales@ghostwritingdesk.com
+          </a>
+        </p>
+      </div>
     </div>
-  </header>
+  </nav>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav flex-wrap justify-content-center text-center w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="./">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="ghostwritingDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Ghostwriting
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ghostwritingDropdown">
+              <!-- Add dropdown items here -->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book-editing">Book Editing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book-publishing">Book Publishing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book-marketing">Book Marketing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="otherServicesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Other Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="otherServicesDropdown">
+              <!-- Add dropdown items here -->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blogs">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
 
   <!-- Hero Section -->
   <section class="main-bg">
@@ -154,7 +153,7 @@
                 Live Chat <i class="bi bi-chat-dots-fill"></i>
               </a>
             </div>
-
+           
             <!-- Partner Logos -->
             <div class="mt-4 d-flex flex-wrap gap-3">
               <img src="assets/img/download.png" width="25%">
@@ -168,271 +167,465 @@
         <!-- Right Column -->
         <div class="col-12 col-md-6 text-center text-md-start d-none d-lg-block">
           <img src="assets/img/1-1.webp" class="img-fluid right-img" width="450px" height="100%">
+           <div>
+<img src="assets/img/book-left.webp" class="book-left"></div>
         </div>
+        
       </div>
     </div>
   </section>
   <!-- slider section -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <h2 class="text1">
-            As Featured <br>In
-          </h2>
-        </div>
-        <div class="col-8">
-          <div class="container mt-5">
-            <div class="row">
-              <section class="logo-slider">
-                <div class="slider-track">
-                  <img src="assets/img/5 (1).webp" alt="NBC Logo" width="15%" height="10%" />
-                  <img src="assets/img/3.webp" alt="HBO Logo" width="15%" height="10%" />
-                  <img src="assets/img/4.webp" alt="BBC Logo" width="15%" height="10%" />
-                  <img src="assets/img/6 (1).webp" alt="Random House Logo" width="15%" height="10%">
-
-
-
-                </div>
-              </section>
-
-            </div>
-          </div>
-        </div>
+ <section class="featured-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-3 text-center text-md-start mb-4 mb-md-0">
+        <h2 class="text1 m-0">
+          As Featured <br>In
+        </h2>
       </div>
-    </div>
-    </div>
+      <div class="col-12 col-md-8">
+  <div class="logo-slider d-flex flex-wrap align-items-center gap-3 justify-content-center justify-content-md-start">
+    <img src="assets/img/5 (1).webp" alt="NBC Logo" class="featured-logo img-fluid" />
+    <img src="assets/img/3.webp" alt="HBO Logo" class="featured-logo img-fluid" />
+    <img src="assets/img/4.webp" alt="BBC Logo" class="featured-logo img-fluid" />
+    <img src="assets/img/6 (1).webp" alt="Random House Logo" class="featured-logo img-fluid" />
+  </div>
+</div>
 
-
-
     </div>
-  </section>
+  </div>
+</section>
+
   <!-- porfolio -->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="portfolio">
-            <h5 class="stokeText">Our Portfolio</h5>
-            <h1 class="fw-bolder pt-text">Our Portfolio
-            </h1>
-            <h3 class="success-text pt-text2">
-              Showcase Of Success</h3>
-          </div>
+<section class="portfolio-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="portfolio">
+          <h5 class="stokeText">Our Portfolio</h5>
+          <h1 class="fw-bolder pt-text">Our Portfolio</h1>
+          <h3 class="success-text pt-text2">Showcase Of Success</h3>
         </div>
       </div>
     </div>
-  </section>
-  <!-- book image -->
-  <section>
+  </div>
+</section>
 
-    <div class="image-parent ">
-      <img src="assets/img/book1.webp" width="19%" class="image-child ">
-      <img src="assets/img/book2.webp" width="19%" class="image-child ">
-      <img src="assets/img/book3.webp" width="19%" class="image-child ">
-      <img src="assets/img/book4.webp" width="19%" class="image-child ">
-      <img src="assets/img/book5.webp" width="19%" class="image-child ">
+  <!-- book image -->
+<section class="books-section py-4">
+  <div class="container">
+    <div class="image-parent d-flex flex-wrap justify-content-center gap-3">
+      <img src="assets/img/book1.webp" class="image-child" />
+      <img src="assets/img/book2.webp" class="image-child" />
+      <img src="assets/img/book3.webp" class="image-child" />
+      <img src="assets/img/book4.webp" class="image-child" />
+      <img src="assets/img/book5.webp" class="image-child" />
     </div>
-    </div>
-    </div>
-    </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Project -->
-  <section>
-    <div class="container">
-      <div class="row justify-content-center">
+ <section class="project-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
         <div class="project">
-          <h4 class="fw-bolder">35,000+ Ghostwriting Projects Completed with Professionalism & <br>Consistency</h4>
-          <p>Ghostwriting Desk is unlocking literary triumphs with creativity and steadfast<br>
-            dedication in Ghostwriting & Publishing services.</p>
+          <h4 class="fw-bolder mb-3">
+            35,000+ Ghostwriting Projects Completed with Professionalism & <br class="d-none d-md-inline">Consistency
+          </h4>
+          <p>
+            Ghostwriting Desk is unlocking literary triumphs with creativity and steadfast<br class="d-none d-md-inline">
+            dedication in Ghostwriting & Publishing services.
+          </p>
 
-          <ul class="list-unstyled d-flex">
-            <li>
-              <img src="assets/img/16.webp" width="40px">
-              <h1 class="numbers fw-bolder">100+</h1>
-              <p>New York Times Bestsellers and Growing</p>
+          <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4 mt-4">
+            <li class="text-center" style="max-width: 150px;">
+              <img src="assets/img/16.webp" width="40px" alt="">
+              <h1 class="numbers fw-bolder mt-2">100+</h1>
+              <p class="small">New York Times Bestsellers and Growing</p>
             </li>
-            <li>
-              <img src="assets/img/11.webp" width="40px">
-              <h1 class="numbers fw-bolder">300+</h1>
-              <p>Manuscripts into Globally Acclaimed Bestsellers</p>
+            <li class="text-center" style="max-width: 150px;">
+              <img src="assets/img/11.webp" width="40px" alt="">
+              <h1 class="numbers fw-bolder mt-2">300+</h1>
+              <p class="small">Manuscripts into Globally Acclaimed Bestsellers</p>
             </li>
-            <li>
-              <img src="assets/img/12.webp" width="40px">
-              <h1 class="numbers fw-bolder">200+</h1>
-              <p>First-time Authors to Publishing Triumph</p>
+            <li class="text-center" style="max-width: 150px;">
+              <img src="assets/img/12.webp" width="40px" alt="">
+              <h1 class="numbers fw-bolder mt-2">200+</h1>
+              <p class="small">First-time Authors to Publishing Triumph</p>
             </li>
-            <li>
-              <img src="assets/img/13.webp" width="40px">
-              <h1 class="numbers fw-bolder">50+</h1>
-              <p>Bestseller Lists Across Genres</p>
+            <li class="text-center" style="max-width: 150px;">
+              <img src="assets/img/13.webp" width="40px" alt="">
+              <h1 class="numbers fw-bolder mt-2">50+</h1>
+              <p class="small">Bestseller Lists Across Genres</p>
             </li>
-            <li>
-              <img src="assets/img/14.webp" width="40px">
-              <h1 class="numbers fw-bolder">30+</h1>
-              <p>Bestselling Collaborations Annually</p>
+            <li class="text-center" style="max-width: 150px;">
+              <img src="assets/img/14.webp" width="40px" alt="">
+              <h1 class="numbers fw-bolder mt-2">30+</h1>
+              <p class="small">Bestselling Collaborations Annually</p>
             </li>
-            <li>
-              <img src="assets/img/15.webp" width="40px">
-              <h1 class="numbers fw-bolder">10+</h1>
-              <p>Prestigious Book Awards</p>
+            <li class="text-center" style="max-width: 150px;">
+              <img src="assets/img/15.webp" width="40px" alt="">
+              <h1 class="numbers fw-bolder mt-2">10+</h1>
+              <p class="small">Prestigious Book Awards</p>
             </li>
           </ul>
-          <div class=" gap-3 mt-4">
-            <a class="button1 btn my-5" href="#" target="_blank" role="button">Start your Bookwriting Journey!</a>
+
+          <div class="mt-4">
+            <a class="button1 btn mt-3" href="#" target="_blank" role="button">
+              Start your Bookwriting Journey!
+            </a>
           </div>
         </div>
-
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Services -->
-  <section class="main-bg2">
-    <div class="container">
-      <div class="row">
-        <div class="text-center text-white">
-          <h1 class="fw-bolder pt-5">Ghostwriting Desk Services</h1>
-          <h3 class="fw-light">The Pinnacle of Writing Excellence</h3>
-        </div>
+ <section class="main-bg2 text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h1 class="fw-bolder">Ghostwriting Desk Services</h1>
+        <h3 class="fw-light">The Pinnacle of Writing Excellence</h3>
+      </div>
 
-        <!-- box row1 -->
-        <div class="col-6">
-          <!-- box1 -->
-          <div class="box1 m-4">
-            <h4 class="fw-bold p-4"> GhostWriting</h4>
-            <h5 class="fw-bold px-4">The Best & Most Affordable Ghostwriting Services</h5>
-            <ul class="box-inside px-5">
-              <li class="py-2 fw-light">
-                We ensure the Genuine Legitimacy of your Work.
-              </li>
-              <li class="py-2 fw-light">
-                We thoroughly review and edit your work.
-              </li>
-              <li class="py-2 fw-light">
-                We provide unlimited revision of each chapter.
-              </li>
-              <li class="py-2 fw-light">
-                The Client has 100 % ownership rights.
-              </li>
-            </ul>
-          </div>
-          <!-- box2 -->
-          <div class="box1 m-4">
-            <h4 class="fw-bold p-4 "> Book Formatting
-            </h4>
-            <h5 class="fw-bold px-4">Our Publishing Experts Will Work To Fine-tune Your Books</h5>
-            <ul class="box-inside px-5">
-              <li class="py-2 fw-light ">
-                Impeccable formatting tailored to industry standards.
-              </li>
-              <li class="py-2 fw-light">
-                Unique styling options to match the tone and theme of your book.
-              </li>
-              <li class="py-2 fw-light">
-                Keen focus on typography to maintain consistency and readability throughout your book.
-              </li>
-              <li class="py-2 fw-light">
-                Providing a professional finish to your book from cover to cover.
-              </li>
-            </ul>
-          </div>
-          <!-- box3 -->
+      <!-- Boxes -->
+      <div class="col-12 col-md-6">
+        <div class="box1 m-3">
+          <h4 class="fw-bold">GhostWriting</h4>
+          <h5 class="fw-bold">The Best & Most Affordable Ghostwriting Services</h5>
+          <ul class="box-inside">
+            <li>We ensure the Genuine Legitimacy of your Work.</li>
+            <li>We thoroughly review and edit your work.</li>
+            <li>We provide unlimited revision of each chapter.</li>
+            <li>The Client has 100% ownership rights.</li>
+          </ul>
+        </div>
+      </div>
 
-          <div class="box1 m-4">
-            <h4 class="fw-bold p-4"> Book Marketing</h4>
-            <h5 class="fw-bold px-4">Optimal Marketing Strategies That Will Let Your Work Thrive</h5>
-            <ul class="box-inside px-5">
-              <li class="py-2 fw-light ">
-                Tailored marketing strategies designed to maximize your book's visibility and impact.
-              </li>
-              <li class="py-2 fw-light">
-                Utilizing communities, forums, and associations, distributing press releases, seeking book reviews,
-                using email marketing, participating in author interviews and podcasts, and hosting book giveaways.
-              </li>
-              <li class="py-2 fw-light">
-                Precision-targeted advertising campaigns to reach your specific audience.
-              </li>
-              <li class="py-2 fw-light">
-                Innovative and impactful book launch events that generate buzz and excitement.
-              </li>
-            </ul>
+      <div class="col-12 col-md-6">
+        <div class="box1 m-3">
+          <h4 class="fw-bold">Book Formatting</h4>
+          <h5 class="fw-bold">Our Publishing Experts Will Fine-tune Your Books</h5>
+          <ul class="box-inside">
+            <li>Impeccable formatting tailored to industry standards.</li>
+            <li>Unique styling options to match the book’s tone and theme.</li>
+            <li>Typography focused on consistency and readability.</li>
+            <li>Professional finish from cover to cover.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="box1 m-3">
+          <h4 class="fw-bold">Book Marketing</h4>
+          <h5 class="fw-bold">Strategies That Help Your Work Thrive</h5>
+          <ul class="box-inside">
+            <li>Tailored strategies to maximize visibility and impact.</li>
+            <li>Press releases, forums, podcasts, giveaways, and more.</li>
+            <li>Targeted advertising to reach specific audiences.</li>
+            <li>Exciting launch events that create buzz.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="box1 m-3">
+          <h4 class="fw-bold">Book Editing</h4>
+          <h5 class="fw-bold">Professional Editing Services</h5>
+          <ul class="box-inside">
+            <li>Substantial Editing – Improve Structure.</li>
+            <li>Error-Free Text – Grammar & Punctuation.</li>
+            <li>Critical Reviews – Fill Loopholes.</li>
+            <li>Rewriting or Paraphrasing as needed.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="box1 m-3">
+          <h4 class="fw-bold">Book Publishing</h4>
+          <h5 class="fw-bold">Proofreading & Legal Publishing Help</h5>
+          <ul class="box-inside">
+            <li>Feedback on structure, pacing, and coherence.</li>
+            <li>E-book conversion for major platforms.</li>
+            <li>ISBN, Copyright, ASIN, LCCN handling.</li>
+            <li>Independent book marketing guidance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="box1 m-3">
+          <h4 class="fw-bold">Cover Design</h4>
+          <h5 class="fw-bold">Design Covers That Captivate</h5>
+          <ul class="box-inside">
+            <li>Diverse formats and custom design options.</li>
+            <li>Genre-specific design expertise.</li>
+            <li>Visually striking, tailored cover art.</li>
+            <li>Unlimited revisions until perfection.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="col-12 text-center mt-4">
+        <a class="btn button1 mt-3" href="#" target="_blank" role="button">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- services2 -->
+ <section class="main-bg3 py-5 text-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h2 class="fw-bold mb-4 text-start text-md-center ">Why Should You Hire Our Services?</h2>
+      </div>
+
+      <!-- Column 1 -->
+      <div class="col-12 col-md-4 mb-4">
+        
+        <div class="box-parent">
+          <div class="box-child mb-4">
+            <div class="image-back mb-2 ">
+              <img src="assets/img/17.webp" class="img-fluid" alt="Bestselling Writers">
+            </div>
+            <h4>Bestselling Writers and Editors</h4>
+            <p>
+              Our team of bestselling ghostwriters<br> and editors offers you the highest caliber<br> of talent and professionalism.
+            </p>
+          </div>
+
+          <div class="box-child">
+            <div class="image-back mb-2">
+              <img src="assets/img/18.webp" class="img-fluid" alt="Expertise in Genres">
+            </div>
+            <h4>Expertise in Diverse Genres</h4>
+            <p>
+              We excel in various genres, ensuring we<br> bring your story to life, no matter the<br> theme or style.
+            </p>
           </div>
         </div>
-        <!-- box row2 -->
-        <div class="col-6">
-          <div class="box1 m-4">
-            <h4 class="fw-bold p-4"> Book Editing</h4>
-            <h5 class="fw-bold px-4">Our Professional Book Editing Services</h5>
-            <ul class="box-inside px-5">
-              <li class="py-2 fw-light ">
-                Substantial Editing - to Improve Structure.
-              </li>
-              <li class="py-2 fw-light">
-                Error Free Text - Grammar & Punctuation.
-              </li>
-              <li class="py-2 fw-light">
-                Writing Critical Reviews - Filling in the Loopholes.
-              </li>
-              <li class="py-2 fw-light">
-                Editing - Rewriting or Paraphrasing.
-              </li>
-            </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="box-parent">
+          <div class="box-child mb-4">
+            <div class="image-back mb-2">
+              <img src="assets/img/19.webp" class="img-fluid" alt="Publishing Navigation">
+            </div>
+            <h4>Publishing Navigation</h4>
+            <p>
+              We work with top agents and publishers<br> to build the perfect publishing strategy<br> to achieve your goals.
+            </p>
           </div>
-          <!-- box2 -->
-          <div class="box1 m-4">
-            <h4 class="fw-bold p-4"> Book Publishing</h4>
-            <h5 class="fw-bold px-4">Our Immaculate Ediiting & Proofreading Services</h5>
-            <ul class="box-inside px-5">
-              <li class="py-2 fw-light ">
-                Manuscript Evaluation -providing feedback on structure, pacing.
-              </li>
-              <li class="py-2 fw-light">
-                E-Book Conversion of your manuscript into various e-book formats for compatibility with major e-readers.
-              </li>
-              <li class="py-2 fw-light">
-                Encompass securing an ISBN, obtaining a Copyright Certificate, generating an ASIN for digital editions,
-                and acquiring an LCCN, ensuring your book's legal and market presence.
-              </li>
-              <li class="py-2 fw-light">
-                Marketing strategies and tips to help you promote your book independently.
-              </li>
-            </ul>
-          </div>
-          <!-- box3 -->
-          <div class="box1 m-4">
-            <h4 class="fw-bold p-4"> Cover Design</h4>
-            <h5 class="fw-bold px-4">Create An Outstanding Book Cover That Stands Out</h5>
-            <ul class="box-inside px-5">
-              <li class="py-2 fw-light ">
-                We Provide diverse Formats & Design.
-              </li>
-              <li class="py-2 fw-light">
-                Specialized knowledge in designing covers tailored to
-                various genres.
-              </li>
-              <li class="py-2 fw-light">
-                Unique and eye-catching designs crafted specifically for
-                your book.
-              </li>
-              <li class="py-2 fw-light">
-                Unlimited revisions until we achieve a design that perfectly
-                encapsulates the spirit of your book.
-              </li>
-            </ul>
+
+          <div class="box-child">
+            <div class="image-back mb-2">
+              <img src="assets/img/20.webp" class="img-fluid" alt="Customized Solutions">
+            </div>
+            <h4>Customized Solutions</h4>
+            <p>
+              Every author and book is unique.<br> We provide tailored solutions that<br> align with your needs.
+            </p>
           </div>
         </div>
-        <!-- button bg-2 -->
-        <div class=" gap-3 mt-4 justify-content-center  d-flex">
-          <a class="button1 btn my-5" href="#" target="_blank" role="button">Get Started</a>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-12 col-md-4 mb-4">
+        <div class="box-parent">
+          <div class="box-child mb-4">
+            <div class="image-back mb-2">
+              <img src="assets/img/21.webp" class="img-fluid" alt="Extensive Research">
+            </div>
+            <h4>Extensive Research Capabilities</h4>
+            <p>
+              We ensure historical accuracy,<br> technical precision, and cultural<br> richness through  detailed research.
+            </p>
+          </div>
+
+          <div class="box-child">
+            <div class="image-back mb-2">
+              <img src="assets/img/22.webp" class="img-fluid" alt="Transparent Process">
+            </div>
+            <h4>Transparent and Flexible Process</h4>
+            <p>
+              You're kept informed throughout<br> the process, and we adapt<br> based on your feedback.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="col-12 text-center mt-4">
+        <h1 class="fw-bolder">What's your Big Idea?</h1>
+        <a class="btn button1 mt-3" href="#" target="_blank" role="button">Write Away!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- sliders and partners -->
+ <section class="py-5  text-white">
+  <div class="container">
+    <div class="row">
+      <!-- Heading -->
+      <div class="col-12 text-center mb-4 text-dark">
+        <h5 class="stokeText">Publishing Partners</h5>
+        <h1 class="fw-bolder pt-text">Publishing Partners</h1>
+      </div>
+
+      <!-- Slider 1 -->
+      <div class="col-12 mb-5">
+        <div class="swiper mySwiper1">
+          <div class="swiper-wrapper">
+            <!-- Slide Items -->
+            <div class="swiper-slide"><img src="assets/img/imgi_47_15.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_46_7.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_48_1.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_49_2.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_50_3.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_56_10.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_51_4.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_52_5.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_53_6.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_54_8.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_55_9.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_57_11.webp" class="img-fluid slider-image" alt=""></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider 2 -->
+      <div class="col-12">
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/img/imgi_61_16.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_60_14.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_59_13.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_58_12.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_56_10.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_52_5.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_54_8.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_55_9.webp" class="img-fluid slider-image" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/imgi_57_11.webp" class="img-fluid slider-image" alt=""></div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+  <!-- steps -->
+<section class="main-bg4 py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 px-3">
+        <h4 class="mb-0">From Idea to Bestseller</h4>
+        <h2 class="mb-4 fw-bold">Your Book's Journey in 6 Steps</h2>
+      </div>
+
+      <!-- Step Cards -->
+    
+      <!-- STEP 1 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+       <div class="processBox">
+                             <div class="step-label">Step 1</div>
+                            <div class="processHead ">
+                                <h4>Order Placement</h4>
+                                <img loading="lazy" data-src="assets/img/23.webp" class="img-fluid lazy" alt="Image" width="53" height="53" src="assets/img/5 (2).webp">
+                            </div>
+                            <p>Fill out the order form to assist our expert<br> ghostwriters in evaluating your<br>  plot and
+                                ideas.</p>
+                        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="processBox">
+                             <div class="step-label">Step 2</div>
+                            <div class="processHead ">
+                                <h4>Outline & Plot Creation</h4>
+                                <img loading="lazy" data-src="assets/img/23.webp" class="img-fluid lazy" alt="Image" width="53" height="53" src="assets/img/23.webp">
+                            </div>
+                            <p>After your consultation is complete, the assigned<br> writer will create an outline for your plot.</p>
+                        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+       <div class="processBox">
+                             <div class="step-label">Step 3</div>
+                            <div class="processHead ">
+                                <h4>Chapter by Chapter Approvals</h4>
+                                <img loading="lazy" data-src="assets/img/23.webp" class="img-fluid lazy" alt="Image" width="53" height="53" src="assets/img/6 (2).webp">
+                            </div>
+                            <p>Following the completion of the book outline, the writer will proceed to work on each chapter, with each chapter being finalized based on your approval.</p>
+                        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+       <div class="processBox">
+                             <div class="step-label">Step 4</div>
+                            <div class="processHead ">
+                                <h4>Editing & Proofreading</h4>
+                                <img loading="lazy" data-src="assets/img/23.webp" class="img-fluid lazy" alt="Image" width="53" height="53" src="assets/img/7 (2).webp">
+                            </div>
+                            <p>Your book will undergo thorough editing and proofreading by our skilled team, ensuring polished, error-free, and impactful content.</p>
+                        </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="processBox">
+                             <div class="step-label">Step 5</div>
+                            <div class="processHead ">
+                                <h4>Book Publishing</h4>
+                                <img loading="lazy" data-src="assets/img/23.webp" class="img-fluid lazy" alt="Image" width="53" height="53" src="assets/img/8 (2).webp">
+                            </div>
+                            <p>Once the editing and proofreading teams finalize your book, it is then readied for book design and publishing.</p>
+                        </div>
+      </div>
+
+      <!-- STEP 6 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+     <div class="processBox">
+                             <div class="step-label">Step 6</div>
+                            <div class="processHead ">
+                                <h4>Book Marketing</h4>
+                                <img loading="lazy" data-src="assets/img/23.webp" class="img-fluid lazy" alt="Image" width="53" height="53" src="assets/img/9.webp">
+                            </div>
+                            <p>We offer exclusive book marketing services on multiple platforms driving the engagement levels of your readers.</p>
+                        </div>
+      </div>
+
+      <!-- CTA BUTTON -->
+      <div class="col-12 text-center">
+        <a href="#" class="btn button1 my-4">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
+
+
+  
 
 
 
@@ -460,7 +653,38 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!-- Initialize Swiper -->
+ <script>
+  const swiper1 = new Swiper('.mySwiper1', {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    breakpoints: {
+      320: { slidesPerView: 2, spaceBetween: 10 },
+      576: { slidesPerView: 3, spaceBetween: 15 },
+      768: { slidesPerView: 4, spaceBetween: 20 },
+      992: { slidesPerView: 5, spaceBetween: 30 },
+    }
+  });
+
+  const swiper2 = new Swiper('.mySwiper2', {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    breakpoints: {
+      320: { slidesPerView: 2, spaceBetween: 10 },
+      576: { slidesPerView: 3, spaceBetween: 15 },
+      768: { slidesPerView: 4, spaceBetween: 20 },
+      992: { slidesPerView: 5, spaceBetween: 30 },
+    }
+  });
+</script>
+
+ 
 
 </body>
 
